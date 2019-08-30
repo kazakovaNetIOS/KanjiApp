@@ -1,5 +1,5 @@
 //
-//  AllKanjiListCoordinator.swift
+//  Coordinator.swift
 //  KanjiApp
 //
 //  Created by Natalia Kazakova on 30/08/2019.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol Coordinator {
+    func start()
+}

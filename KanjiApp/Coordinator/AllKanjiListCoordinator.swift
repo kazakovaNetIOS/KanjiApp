@@ -29,7 +29,7 @@ class AllKanjiListCoordinator {
 
 extension AllKanjiListCoordinator: Coordinator {
     func start() {
-        let kanjiListViewController = KanjiListViewController(nibName: nil, bundle: nil)
+        let kanjiListViewController = KanjiListViewController.instantiateViewController()
         kanjiListViewController.delegate = self
         kanjiListViewController.title = "Kanji list"
         kanjiListViewController.kanjiList = allKanjiList

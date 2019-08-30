@@ -30,7 +30,7 @@ class KanjiDetailCoordinator {
 
 extension KanjiDetailCoordinator: Coordinator {
     func start() {
-        let kanjiDetailViewController = KanjiDetailViewController(nibName: nil, bundle: nil)
+        let kanjiDetailViewController = KanjiDetailViewController.instantiateViewController()
         kanjiDetailViewController.delegate = self
         kanjiDetailViewController.title = "Kanji details"
         kanjiDetailViewController.selectedKanji = kanji
@@ -45,7 +45,7 @@ extension KanjiDetailCoordinator: Coordinator {
 
 extension KanjiDetailCoordinator: KanjiDetailViewControllerDelegate {
     func kanjiDetailViewControllerDidSelectWord(_ word: String) {
-        let wordKanjiListViewController = KanjiListViewController(nibName: nil, bundle: nil)
+        let wordKanjiListViewController = KanjiListViewController.instantiateViewController()
         wordKanjiListViewController.cellAccessoryType = .none
         let kanjiForWord = kanjiStorage.kanjiForWord(word)
         wordKanjiListViewController.kanjiList = kanjiForWord

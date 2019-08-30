@@ -1,7 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6A-Rp-VRh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Kanji List View Controller-->
+        <scene sceneID="GNO-Q8-kCE">
+            <objects>
+                <viewController id="f6A-Rp-VRh" customClass="KanjiListViewController" customModule="KanjiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i34-7i-ICT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SXB-82-UTN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A5B-4F-0h0" firstAttribute="bottom" secondItem="SXB-82-UTN" secondAttribute="bottom" id="6n0-F6-7dN"/>
+                            <constraint firstItem="A5B-4F-0h0" firstAttribute="trailing" secondItem="SXB-82-UTN" secondAttribute="trailing" id="UxT-By-ru9"/>
+                            <constraint firstItem="SXB-82-UTN" firstAttribute="leading" secondItem="A5B-4F-0h0" secondAttribute="leading" id="Wny-yf-CZj"/>
+                            <constraint firstItem="SXB-82-UTN" firstAttribute="top" secondItem="A5B-4F-0h0" secondAttribute="top" id="gsT-vM-G4e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A5B-4F-0h0"/>
+                    </view>
+                    <connections>
+                        <outlet property="kanjiListTableView" destination="SXB-82-UTN" id="APl-lu-6lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ta8-2I-wwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
 </document>
